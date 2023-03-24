@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h2>Programa Situação da Turma</h2>
+        <hr>
+        Nome Aluno(a):
+        <input type="text" id="nomeAluno">
+        1°Nota:
+        <input type="text" id="PrimeiraN">
+        2°Nota:
+        <input type="text" id="segundaN">
+
+        <button id="mediaAluno">Exibir média Aluno</button>
+        <button id="mediaTurma">Exibir média da turma</button>
+    </header>
+
+    <script>
+    
+        const nomeAluno = document.getElementById('nomeAluno')
+        const PrimeiraN = document.getElementById('PrimeiraN')
+        const segundaN = document.getElementById('segundaN')
+        const mediaAluno = document.getElementById('mediaAluno')
+        const mediaTurma = document.getElementById('mediaTurma')
+
+        mediaAluno.addEventListener('click',function(){
+        
+            let name = document.getElementById("nomeAluno").value;
+            let Nota1 = document.getElementById("PrimeiraN").value;
+            let Nota2 = document.getElementById("segundaN").value;
+             console.log(name,Nota1,Nota2)
+            let mediaAluno = (Nota1 + Nota2) /2;
+             
+             if(mediaAluno >= 7){
+                document.write('media do Aluno ' +mediaAluno+' ,Parabéns ' +nomeAluno+ ' você foi Aprovado')
+                
+             }else if(mediaAluno <= 7 >= 3){
+                document.write('media do Aluno ' +mediaAluno+' ,Atenção' +nomeAluno+ ' você está em Recuperação')
+             }else if(mediaAluno <=3){
+                document.write('media do Aluno ' +mediaAluno+' ,Ops ' +nomeAluno+ ' você foi reprovado')
+             }
+
+             
+
+        });
+
+    </script>
+</body>
+</html>
